@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		AC4F2F93251DC7F4006C2E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F2F92251DC7F4006C2E26 /* Assets.xcassets */; };
 		AC4F2F96251DC7F4006C2E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F2F94251DC7F4006C2E26 /* LaunchScreen.storyboard */; };
 		AC4F2FA1251DC7F5006C2E26 /* ProjectOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F2FA0251DC7F5006C2E26 /* ProjectOneTests.swift */; };
+		AC4F2FAD251DC986006C2E26 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = AC4F2FAC251DC986006C2E26 /* FacebookCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC4F2F86251DC7F2006C2E26 /* ProjectOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4F2F86251DC7F2006C2E26 /* ProjectOneTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectOneTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4F2F89251DC7F2006C2E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4F2F8B251DC7F2006C2E26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC4F2F8D251DC7F2006C2E26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4F2FAD251DC986006C2E26 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +72,7 @@
 		AC4F2F87251DC7F2006C2E26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC4F2F86251DC7F2006C2E26 /* ProjectOne.app */,
+				AC4F2F86251DC7F2006C2E26 /* ProjectOneTarget.app */,
 				AC4F2F9C251DC7F5006C2E26 /* ProjectOneTests.xctest */,
 			);
 			name = Products;
@@ -102,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC4F2F85251DC7F2006C2E26 /* ProjectOne */ = {
+		AC4F2F85251DC7F2006C2E26 /* ProjectOneTarget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC4F2FA5251DC7F5006C2E26 /* Build configuration list for PBXNativeTarget "ProjectOne" */;
+			buildConfigurationList = AC4F2FA5251DC7F5006C2E26 /* Build configuration list for PBXNativeTarget "ProjectOneTarget" */;
 			buildPhases = (
 				AC4F2F82251DC7F2006C2E26 /* Sources */,
 				AC4F2F83251DC7F2006C2E26 /* Frameworks */,
@@ -114,9 +116,12 @@
 			);
 			dependencies = (
 			);
-			name = ProjectOne;
+			name = ProjectOneTarget;
+			packageProductDependencies = (
+				AC4F2FAC251DC986006C2E26 /* FacebookCore */,
+			);
 			productName = ProjectOne;
-			productReference = AC4F2F86251DC7F2006C2E26 /* ProjectOne.app */;
+			productReference = AC4F2F86251DC7F2006C2E26 /* ProjectOneTarget.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AC4F2F9B251DC7F5006C2E26 /* ProjectOneTests */ = {
@@ -165,11 +170,14 @@
 				Base,
 			);
 			mainGroup = AC4F2F7D251DC7F2006C2E26;
+			packageReferences = (
+				AC4F2FAB251DC986006C2E26 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = AC4F2F87251DC7F2006C2E26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC4F2F85251DC7F2006C2E26 /* ProjectOne */,
+				AC4F2F85251DC7F2006C2E26 /* ProjectOneTarget */,
 				AC4F2F9B251DC7F5006C2E26 /* ProjectOneTests */,
 			);
 		};
@@ -219,7 +227,7 @@
 /* Begin PBXTargetDependency section */
 		AC4F2F9E251DC7F5006C2E26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AC4F2F85251DC7F2006C2E26 /* ProjectOne */;
+			target = AC4F2F85251DC7F2006C2E26 /* ProjectOneTarget */;
 			targetProxy = AC4F2F9D251DC7F5006C2E26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -298,6 +306,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = ProjectOne;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -340,6 +349,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -351,6 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = ProjectOne;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -370,6 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.ProjectOne;
+				PRODUCT_MODULE_NAME = ProjectOneTarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,6 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.ProjectOne;
+				PRODUCT_MODULE_NAME = ProjectOneTarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,10 +422,11 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.ProjectOneTests;
+				PRODUCT_MODULE_NAME = ProjectOneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectOne.app/ProjectOne";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectOneTarget.app/ProjectOneTarget";
 			};
 			name = Debug;
 		};
@@ -431,10 +445,11 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.ProjectOneTests;
+				PRODUCT_MODULE_NAME = ProjectOneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectOne.app/ProjectOne";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectOneTarget.app/ProjectOneTarget";
 			};
 			name = Release;
 		};
@@ -450,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC4F2FA5251DC7F5006C2E26 /* Build configuration list for PBXNativeTarget "ProjectOne" */ = {
+		AC4F2FA5251DC7F5006C2E26 /* Build configuration list for PBXNativeTarget "ProjectOneTarget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC4F2FA6251DC7F5006C2E26 /* Debug */,
@@ -469,6 +484,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC4F2FAB251DC986006C2E26 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC4F2FAC251DC986006C2E26 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC4F2FAB251DC986006C2E26 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC4F2F7E251DC7F2006C2E26 /* Project object */;
 }

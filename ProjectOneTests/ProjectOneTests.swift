@@ -7,12 +7,14 @@
 //
 
 import XCTest
-@testable import ProjectOne
+@testable import ProjectOneTarget
 
 class ProjectOneTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let vc = ViewController()
+        
     }
 
     override func tearDownWithError() throws {
